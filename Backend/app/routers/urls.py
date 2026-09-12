@@ -15,10 +15,8 @@ from app.services.shortener import get_unique_code
 from app.services.cache import cache_url, get_cached_url, invalidate_url, cache_stats, get_cached_stats, invalidate_stats
 from app.services.analytics import get_geo, parse_device, get_client_ip
 from app.config import settings
-from slowapi import Limiter
-from slowapi.util import get_remote_address
+from app.limiter import limiter
 
-limiter = Limiter(key_func=get_remote_address)
 router = APIRouter(tags=["urls"])
 
 RATE_LIMIT_FREE = "10/minute"

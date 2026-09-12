@@ -1,11 +1,11 @@
 {
   "services": {
     "frontend": {
-      "root": "frontend/",
-      "framework": "nextjs"
+      "root": "Frontend/",
+      "framework": "vite"
     },
     "backend": {
-      "root": "backend/",
+      "root": "Backend/",
       "entrypoint": "main:app",
       "framework": "fastapi"
     }
@@ -16,8 +16,28 @@
       "destination": { "service": "backend" }
     },
     {
-      "source": "/(.*)",
+      "source": "/login",
       "destination": { "service": "frontend" }
+    },
+    {
+      "source": "/register",
+      "destination": { "service": "frontend" }
+    },
+    {
+      "source": "/analytics/(.*)",
+      "destination": { "service": "frontend" }
+    },
+    {
+      "source": "/assets/(.*)",
+      "destination": { "service": "frontend" }
+    },
+    {
+      "source": "/",
+      "destination": { "service": "frontend" }
+    },
+    {
+      "source": "/(.*)",
+      "destination": { "service": "backend" }
     }
   ]
 }
