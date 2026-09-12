@@ -1,5 +1,7 @@
 # url-shortner
-url- shortner
+url- shortner 
+
+live link - https://url-shortner-nu-lime.vercel.app
 # ⚡ LinkShort — URL Shortener with Analytics
 
 A production-grade URL shortener built as a FAANG system design interview reference project. Every architectural decision maps directly to a real interview question.
@@ -132,7 +134,6 @@ Deployment (Railway)
 3. Set env vars:
 
 SECRET_KEY=<openssl rand -hex 32>
-BASE_URL=https://your-app.up.railway.app
+BASE_URL=https://url-shortner-nu-lime.vercel.app
 ENVIRONMENT=production
 
-Railway auto-injects DATABASE_URL and REDIS_URL from plugins. Deploys automatically on push via railway.toml.

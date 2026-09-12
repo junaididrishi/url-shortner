@@ -2,7 +2,10 @@
   "services": {
     "frontend": {
       "root": "Frontend/",
-      "framework": "vite"
+      "framework": "vite",
+      "rewrites": [
+        { "source": "/(.*)", "destination": "/index.html" }
+      ]
     },
     "backend": {
       "root": "Backend/",
